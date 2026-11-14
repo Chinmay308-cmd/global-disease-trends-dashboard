@@ -218,3 +218,13 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# WHO raw datasets - never commit
+data/raw/
+
+# Local Python virtual environment
+.venv/
+
+# Environment secrets
+.env
+.env.*
