@@ -103,11 +103,25 @@ This installs the pinned versions of Pandas, Dash, Plotly, PyArrow, pytest, and 
 
 ### 4. Run the Dashboard
 
-The dashboard application is under development.
+Activate the virtual environment, then start the Dash app from the repository root.
 
-Once its entry point is implemented at `app/main.py`, run:
+**Windows (PowerShell)**
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+python app/main.py
+```
+
+If activation is blocked by PowerShell, run:
+
+```powershell
+.\.venv\Scripts\python.exe app/main.py
+```
+
+**macOS**
 
 ```bash
+source .venv/bin/activate
 python app/main.py
 ```
 
@@ -115,7 +129,7 @@ Then open:
 
 `http://127.0.0.1:8050/`
 
-**Note:** The dashboard launch command will work only after the application entry point is added.
+The application serves a desktop-first skeleton with placeholder filters and chart regions. Interactive filters, charts, and data downloads will be added in later tickets.
 
 ## Running Automated Tests
 
@@ -125,7 +139,7 @@ Run all project tests:
 python -m pytest
 ```
 
-An initial placeholder test is included to verify that the test environment and CI work correctly.
+Automated tests verify that the Dash app imports successfully, exposes `app.server`, builds its layout, and includes all eight wireframe regions.
 
 ## Code Quality
 
